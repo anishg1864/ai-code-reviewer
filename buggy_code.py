@@ -1,5 +1,8 @@
+# This is a new change to trigger the pull request
 import os
 
+def check_file(filename):
+...
 def check_file(filename):
   # This function has a bug. It should check if the file exists *before* trying to read it.
   f = open(filename, "r")
