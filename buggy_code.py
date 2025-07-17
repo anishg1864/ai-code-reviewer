@@ -1,6 +1,6 @@
-// buggy.js
+ buggy.js
 
-// Bug 1: Using '==' which can lead to unexpected type coercion.
+ Bug 1: Using '==' which can lead to unexpected type coercion.
 function checkValue(val) {
   if (val == 5) {
     return true;
@@ -8,9 +8,9 @@ function checkValue(val) {
   return false;
 }
 
-// Bug 2: This function might try to access a property on a null object, causing a TypeError.
+ Bug 2: This function might try to access a property on a null object, causing a TypeError.
 function getUsername(user) {
-  // What if the user object is null or undefined?
+   What if the user object is null or undefined?
   return user.name;
 }
 
