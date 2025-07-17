@@ -1,19 +1,33 @@
-# This is a new change to trigger the pull request
-import os
+// buggy.js
 
-def check_file(filename):
-...
-def check_file(filename):
-  # This function has a bug. It should check if the file exists *before* trying to read it.
-  f = open(filename, "r")
-  contents = f.read()
-  print("File size is:", len(contents))
-  return contents
+// Bug 1: Using '==' which can lead to unexpected type coercion.
+function checkValue(val) {
+  if (val == 5) {
+    return true;
+  }
+  return false;
+}
 
-def get_user_data(id):
-    # This function is missing a return statement
-    user = "user-" + id
-    print("Fetching data for", user)
+// Bug 2: This function might try to access a property on a null object, causing a TypeError.
+function getUsername(user) {
+  // What if the user object is null or undefined?
+  return user.name;
+}
 
-# Calling a function that doesn't exist
-process_data() for 1 
+// Bug 3: Classic asynchronous issue. The loop will finish before the timeouts execute.
+// All logs will show the same final value for 'i'.
+function delayedLoop() {
+  for (var i = 0; i < 3; i++) {
+    setTimeout(function() {
+      console.log('Value of i:', i);
+    }, 10);
+  }
+}
+
+// Bug 4: Function is declared but never used.
+function unusedFunction() {
+  return "I do nothing.";
+}
+
+checkValue("5");
+delayedLoop();
