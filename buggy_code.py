@@ -16,4 +16,4 @@ def get_user_data(id):
     print("Fetching data for", user)
 
 # Calling a function that doesn't exist
-process_data()
+process_data() for 1 
